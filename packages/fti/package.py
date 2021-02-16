@@ -76,7 +76,7 @@ class Fti(CMakePackage):
             '-DENABLE_LUSTRE:BOOL={:s}'.format('ON' if '+lustre' in self.spec else 'OFF'),
             '-DENABLE_SIONLIB:BOOL={:s}'.format('ON' if '+sion' in self.spec else 'OFF')
         ]
-        if version > Version('1.5'):
+        if self.spec.satisfies('@1.6:'):
             args = args + ['-DENABLE_DOCU:BOOL={:s}'.format('ON' if '+doc' in self.spec else 'OFF'),
                 '-DENABLE_EXAMPLES:BOOL={:s}'.format('ON' if '+examples' in self.spec else 'OFF'),
                 '-DENABLE_TUTORIAL:BOOL={:s}'.format('ON' if '+tutorial' in self.spec else 'OFF')]
