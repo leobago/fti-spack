@@ -13,7 +13,9 @@ for a basic installation do:
 `spack install fti`  
 To install a variant (e.g. HDF5, SIONlib, etc.) add +variant. For instance:    
 `spack install fti+hdf5`  
-to install FTI with HDF5 support  
+to install FTI with HDF5 support.  
+  
+For more information about spack, visit https://spack-tutorial.readthedocs.io/en/latest/index.html
 # Dependencies
 To install FTI with SIONlib support, please install the sionlib spack-package from  
 -> https://gitlab.version.fz-juelich.de/cstao-public/SIONlib/spack-repository  
