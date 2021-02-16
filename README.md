@@ -14,3 +14,6 @@ for a basic installation do:
 To install a variant (e.g. HDF5, SIONlib, etc.) add +variant. For instance:    
 `spack install fti+hdf5`  
 to install FTI with HDF5 support  
+# Dependencies
+To install FTI with SIONlib support, please install the sionlib spack-package from  
+-> https://gitlab.version.fz-juelich.de/cstao-public/SIONlib/spack-repository  
