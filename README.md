@@ -2,7 +2,7 @@
 Spack repository for FTI (https://github.com/leobago/fti.git).
 # Add Package to Spack
 1) clone fti spack-repo into the repos directory of the spack installation  
-`git clone https://github.com/leobago/fti-spack <spack_path>/var/spack/repos/`  
+`git clone https://github.com/leobago/fti-spack <spack_path>/var/spack/repos/fti`  
 2) Add the Repo  
 `spack repo add spack/var/spack/repos/fti`  
 # Versions  
