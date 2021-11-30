@@ -54,9 +54,6 @@ class Fti(CMakePackage):
     variant('doc',           default=False, when='@1.6:', description = 'Enables the generation of a Doxygen documentation')
     variant('tutorial',      default=False, when='@1.6:', description = 'Enables the generation of tutorial files')
 
-    language('c')
-    language('fortran', standard='f90', when='+fortran')
-
     depends_on('zlib',                          type=('build', 'link', 'run'))
     depends_on('mpi',                           type=('build', 'link', 'run'))
     depends_on('cmake@3.4:',                    type='build')
@@ -66,6 +63,8 @@ class Fti(CMakePackage):
     depends_on('doxygen',                       type='build', when='+doc')
 
     def cmake_args(self):
+        if '+fortran' in self.spec and (self.compiler.f77 is None) or (self.compiler.fc is None):
+            raise InstallError('+fortran was selected, however, no Fortran compiler is available!')
         args = [
             self.define_from_variant('ENABLE_FORTRAN', 'fortran'),
             self.define_from_variant('ENABLE_EXAMPLES', 'examples'),
