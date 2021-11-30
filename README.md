@@ -6,7 +6,7 @@ Spack repository for FTI (https://github.com/leobago/fti.git).
 2) Add the Repo  
 `spack repo add spack/var/spack/repos/fti`  
 # Versions  
-to list the available versions and variants, issue:   
+to list the available versions, variants and default install parameters, issue:   
 `spack info fti`  
 # Install FTI  
 for a basic installation do:    
