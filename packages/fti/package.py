@@ -63,7 +63,7 @@ class Fti(CMakePackage):
     depends_on('doxygen',                       type='build', when='+doc')
 
     def cmake_args(self):
-        if '+fortran' in self.spec and (self.compiler.f90 is None) or (self.compiler.fc is None):
+        if '+fortran' in self.spec and (self.compiler.fc is None) and (self.compiler.f90 is None) and (self.compiler.f77 is None):
             raise InstallError('+fortran was selected, however, no Fortran compiler is available!')
         args = [
             self.define_from_variant('ENABLE_FORTRAN', 'fortran'),
